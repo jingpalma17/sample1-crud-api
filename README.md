@@ -2,7 +2,7 @@
 
 ## Description
 
-CRUD sample using Nest JS 7
+CRUD sample using Nest JS 7. Live app [link](https://sample1-crud-api.vercel.app/api).
 
 ## Installation
 
