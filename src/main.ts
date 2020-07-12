@@ -8,6 +8,7 @@ async function bootstrap() {
   const basePath = '/api'; // Use config setting ./config
   const explorerPath = 'explorer';
 
+  app.enableCors({ origin: '*' });
   app.setGlobalPrefix(basePath);
   const options = new DocumentBuilder()
     .setBasePath(basePath)
