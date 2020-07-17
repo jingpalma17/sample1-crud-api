@@ -1,4 +1,12 @@
-import { Controller, Get, Delete, Post, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Delete,
+  Post,
+  Param,
+  Body,
+  Put,
+} from '@nestjs/common';
 
 import { UsersService } from './users.service';
 import { User } from '../entities/user.entity';
@@ -22,9 +30,9 @@ export class UsersController {
     return this.service.create(user);
   }
 
-  @Post(':id')
+  @Put(':id')
   async update(@Param('id') id: number, @Body() user: User): Promise<User> {
-    user.id = id;
+    user.id = +id; // TODO user parseint pipe instead
     return this.service.update(user);
   }
 
