@@ -14,6 +14,7 @@ export class UsersService {
   }
 
   async create(user: User): Promise<User> {
+    delete user.id;
     return this.usersRepository.save(user);
   }
 
@@ -22,7 +23,6 @@ export class UsersService {
   }
 
   async update(user: User): Promise<User> {
-    delete user.id;
     return this.usersRepository.save(user);
   }
 
